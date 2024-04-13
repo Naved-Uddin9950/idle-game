@@ -1,6 +1,9 @@
 import { mainView } from '../src/views/main.js';
 import { playView } from '../src/views/play.js';
 import { errorHandler } from '../utils/errorHandler.js';
+import { setState } from '../utils/setState.js';
+import { useState } from '../utils/useState.js';
+import { back } from '../utils/backButton.js';
 
 const gameWrapper = document.getElementById('game-wrapper');
 
@@ -23,6 +26,8 @@ export const play = () => {
         playBtn.addEventListener('click', () => {
             let playScreen = playView();
             gameWrapper.innerHTML = playScreen;
+            let backButton = document.querySelector('back');
+            
         });
     } catch (error) {
         errorHandler('Play button', error);
