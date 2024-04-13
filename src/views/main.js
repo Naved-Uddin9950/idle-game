@@ -1,5 +1,8 @@
 export const mainView = () => {
     return `
-    <play>Click to play</play>
+    <div class='main-container'>
+        <settings>Gear Icon</settings>
+        <play>Play</play>
+    </div>
     `;
 }

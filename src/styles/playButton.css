@@ -1,0 +1,18 @@
+play {
+    size: auto;
+    box-sizing: border-box;
+    padding: 5px 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 80%;
+    /* left: 50%; */
+    left: calc(50vw - 50px);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+play:hover {
+    color: blue;
+}
