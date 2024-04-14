@@ -3,6 +3,7 @@ import { playView } from '../src/views/play.js';
 import { errorHandler } from '../utils/errorHandler.js';
 import { setState } from '../utils/setState.js';
 import { useState } from '../utils/useState.js';
+import { useMiddleware } from '../utils/useMiddleware.js';
 import { back } from '../utils/backButton.js';
 
 const gameWrapper = document.getElementById('game-wrapper');
@@ -10,9 +11,9 @@ const gameWrapper = document.getElementById('game-wrapper');
 // Initialiazes main screen
 export const main = () => {
     const mainScreen = mainView();
-    
     try {
         gameWrapper.innerHTML = mainScreen;
+        useMiddleware(play);
     } catch (error) {
         errorHandler('Main screen', error);
     }
