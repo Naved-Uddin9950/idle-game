@@ -27,7 +27,7 @@ export const play = () => {
             let playScreen = playView();
             gameWrapper.innerHTML = playScreen;
             let backButton = document.querySelector('back');
-            
+            back(backButton, main);
         });
     } catch (error) {
         errorHandler('Play button', error);
