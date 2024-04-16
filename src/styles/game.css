@@ -1,6 +1,7 @@
 @import url('./mainScreen.css');
 @import url('./settingsButton.css');
 @import url('./backButton.css');
+@import url('./playScreen.css');
 
 * {
     padding: 0;
