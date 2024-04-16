@@ -1,10 +1,18 @@
-@import url('./playButton.css');
+@import url('./mainScreen.css');
+/* @import url('./playButton.css'); */
 @import url('./settingsButton.css');
 @import url('./backButton.css');
 
 * {
     padding: 0;
     margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 .main-container {

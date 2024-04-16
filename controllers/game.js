@@ -20,17 +20,17 @@ export const main = () => {
 }
 
 // Play button functionality
-export const play = () => {
-    const playBtn = document.querySelector('play');
+// export const play = () => {
+//     const playBtn = document.querySelector('play');
 
-    try {
-        playBtn.addEventListener('click', () => {
-            let playScreen = playView();
-            gameWrapper.innerHTML = playScreen;
-            let backButton = document.querySelector('back');
-            back(backButton, main);
-        });
-    } catch (error) {
-        errorHandler('Play button', error);
-    }
-}
+//     try {
+//         playBtn.addEventListener('click', () => {
+//             let playScreen = playView();
+//             gameWrapper.innerHTML = playScreen;
+//             let backButton = document.querySelector('back');
+//             back(backButton, main);
+//         });
+//     } catch (error) {
+//         errorHandler('Play button', error);
+//     }
+// }

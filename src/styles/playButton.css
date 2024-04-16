@@ -1,18 +1,14 @@
 play {
-    size: auto;
-    box-sizing: border-box;
-    padding: 5px 30px;
-    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    position: fixed;
-    top: 80%;
-    /* left: 50%; */
-    left: calc(50vw - 50px);
-    font-size: 26px;
-    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 play:hover {
-    color: blue;
+    background-color: #45a049;
 }
