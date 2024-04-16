@@ -9,6 +9,9 @@ import { back } from '../utils/backButton.js';
 const gameWrapper = document.getElementById('game-wrapper');
 const goldCoins = useState('gold') ?? '0';
 
+useMiddleware(playView);
+
+
 // Initialiazes main screen
 export const main = () => {
     const mainScreen = mainView();
