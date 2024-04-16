@@ -7,7 +7,7 @@ import { useMiddleware } from '../utils/useMiddleware.js';
 import { back } from '../utils/backButton.js';
 
 const gameWrapper = document.getElementById('game-wrapper');
-
+const goldCoins = useState('gold') ?? '0';
 
 // Initialiazes main screen
 export const main = () => {
@@ -35,3 +35,6 @@ export const main = () => {
 //         errorHandler('Play button', error);
 //     }
 // }
+
+
+setState('gold', goldCoins.toString());
