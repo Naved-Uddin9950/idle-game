@@ -5,12 +5,11 @@ import { setState } from '../utils/setState.js';
 import { useState } from '../utils/useState.js';
 import { useMiddleware } from '../utils/useMiddleware.js';
 // import { back } from '../utils/backButton.js';
-import { getGold } from './gold.js';
+import { getGold, updateGold } from './gold.js';
 
 const gameWrapper = document.getElementById('game-wrapper');
-const goldCoins = useState('gold') ?? '0';
+const goldCoins = Number(useState('gold')) || 0;
 
-useMiddleware(playView);
 
 
 // Initialiazes main screen
@@ -18,6 +17,7 @@ export const main = () => {
     const mainScreen = mainView();
     try {
         gameWrapper.innerHTML = mainScreen;
+        useMiddleware(() => updateGold(goldCoins));
         useMiddleware(play);
     } catch (error) {
         errorHandler('Main screen', error);
@@ -32,14 +32,20 @@ export const play = () => {
         playBtn.addEventListener('click', () => {
             let playScreen = playView();
             gameWrapper.innerHTML = playScreen;
-            // useMiddleware(getGold);
+            const goldCoins = Number(useState('gold')) || 0;
+            let goldUpdated = false;
+
+            if(!goldUpdated) {
+                useMiddleware(() => updateGold(goldCoins));
+                goldUpdated = true;
+            }
+
+            useMiddleware(getGold);
             // let backButton = document.querySelector('back');
             // back(backButton, main);
+            setState('gold', goldCoins.toString());
         });
     } catch (error) {
         errorHandler('Play button', error);
     }
 }
-
-
-setState('gold', goldCoins.toString());
