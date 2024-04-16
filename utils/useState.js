@@ -1,8 +1,8 @@
 import { errorHandler } from "./errorHandler.js";
 
-export const useState = (stateName, state) => {
+export const useState = (stateName) => {
     try {
-        return localStorage.getItem(stateName, state);
+        return localStorage.getItem(stateName);
     } catch (error) {
         errorHandler('useState', error);
     }
