@@ -68,6 +68,18 @@ export const playStyles = () => {
             .monster img {
                 width: 50px;
             }
+
+            .player-hp-bar {
+                border: 1px solid black;
+                border-radius: 10px;
+                position: absolute;
+                width: 100px;
+                height: 10px;
+                background-color: red;
+                top: calc(100vh - 220px);
+                left: calc(50% - 50px);
+            }
+            
         `;
 
         styleElement.textContent = cssStyles;

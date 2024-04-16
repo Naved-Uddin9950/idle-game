@@ -12,6 +12,7 @@ export const playView = () => {
                 <p class="icon" id="shop-icon">&#128722;</p>
             </div>
             <img src="../public/images/player.gif" alt="Main Character" class="main-character" id="main-character">
+            <div class="player-hp-bar" id="player-hp-bar"></div>
         </div>
     `;
 }

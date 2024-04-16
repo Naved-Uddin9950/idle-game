@@ -7,9 +7,12 @@ import { useMiddleware } from '../utils/useMiddleware.js';
 import { back } from '../utils/backButton.js';
 import { getGold, updateGold } from './gold.js';
 // import { monsters } from './monsters.js';
+import { Player } from './player.js';
 
 const gameWrapper = document.getElementById('game-wrapper');
-const goldCoins = Number(useState('gold')) || 0;
+
+const player = new Player('Shinigami', 'Male', 100, 10, 1, 0);
+const playerData = JSON.parse(useState('player')) || player;
 
 
 
@@ -17,8 +20,9 @@ const goldCoins = Number(useState('gold')) || 0;
 export const main = () => {
     const mainScreen = mainView();
     try {
-
+        
         gameWrapper.innerHTML = mainScreen;
+        const goldCoins = Number(useState('gold')) || 0;
         useMiddleware(() => updateGold(goldCoins));
         useMiddleware(play);
     } catch (error) {
@@ -47,7 +51,9 @@ export const play = () => {
 
             let backButton = document.querySelector('back');
             back(backButton, main);
+
             setState('gold', goldCoins.toString());
+            setState('player', JSON.stringify(playerData));
         });
     } catch (error) {
         errorHandler('Play button', error);
