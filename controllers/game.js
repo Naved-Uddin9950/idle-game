@@ -6,6 +6,7 @@ import { useState } from '../utils/useState.js';
 import { useMiddleware } from '../utils/useMiddleware.js';
 import { back } from '../utils/backButton.js';
 import { getGold, updateGold } from './gold.js';
+import { monsters } from './monsters.js';
 
 const gameWrapper = document.getElementById('game-wrapper');
 const goldCoins = Number(useState('gold')) || 0;
@@ -42,6 +43,8 @@ export const play = () => {
             }
 
             useMiddleware(getGold);
+            useMiddleware(() => monsters(5));
+
             let backButton = document.querySelector('back');
             back(backButton, main);
             setState('gold', goldCoins.toString());

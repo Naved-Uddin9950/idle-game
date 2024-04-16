@@ -1,9 +1,9 @@
 export const playStyles = () => {
     const temp = document.getElementById('playScreenStyles');
 
-    if(!temp) {
+    if (!temp) {
         const styleElement = document.createElement('style');
-    
+
         const cssStyles = `
             .game-screen {
                 position: relative;
@@ -14,6 +14,7 @@ export const playStyles = () => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                overflow: hidden;
             }
         
             .main-character {
@@ -47,11 +48,31 @@ export const playStyles = () => {
                 margin-left: 10px;
                 cursor: pointer;
             }
+
+            @keyframes moveMonster {
+                from {
+                  transform: translateY(-100%);
+                }
+                to {
+                  transform: translateY(calc(100vh - 80px));
+                }
+            }
+              
+            .monster {
+                position: absolute;
+                width: 50px;
+                height: auto;
+                animation: moveMonster 6s linear forwards;
+            }    
+            
+            .monster img {
+                width: 50px;
+            }
         `;
-    
+
         styleElement.textContent = cssStyles;
         styleElement.id = 'playScreenStyles';
-    
+
         document.head.appendChild(styleElement);
     }
 }
