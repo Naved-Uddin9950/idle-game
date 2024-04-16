@@ -21,6 +21,9 @@ export const playStyles = () => {
                 bottom: 0;
                 width: 200px;
                 height: auto;
+                border: 1px solid black;
+                border-radius: 50%;
+                background-color: #ffff;
             }
         
             .gold-display {

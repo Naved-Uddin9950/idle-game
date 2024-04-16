@@ -16,7 +16,7 @@ const goldCoins = Number(useState('gold')) || 0;
 export const main = () => {
     const mainScreen = mainView();
     try {
-        
+
         gameWrapper.innerHTML = mainScreen;
         useMiddleware(() => updateGold(goldCoins));
         useMiddleware(play);
