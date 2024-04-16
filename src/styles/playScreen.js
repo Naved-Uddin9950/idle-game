@@ -1,6 +1,6 @@
 export const playStyles = () => {
     const styleElement = document.createElement('style');
-    
+
     const cssStyles = `
         .game-screen {
             position: relative;
@@ -23,7 +23,7 @@ export const playStyles = () => {
         .gold-display {
             position: absolute;
             top: 10px;
-            left: 10px;
+            left: 50px;
             font-size: 18px;
         }
     
@@ -42,8 +42,8 @@ export const playStyles = () => {
             cursor: pointer;
         }
     `;
-    
+
     styleElement.textContent = cssStyles;
-    
+
     document.head.appendChild(styleElement);
 }

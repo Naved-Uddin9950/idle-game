@@ -4,6 +4,7 @@ export const playView = () => {
     playStyles();
     return `
         <div class="game-screen">
+            <back>⇦</back>
             <div class="gold-display">Gold: <span id="gold-count">0</span></div>
             <div class="icons">
                 <p class="icon" id="settings-icon">⚙️</p>
