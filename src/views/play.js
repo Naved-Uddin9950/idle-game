@@ -1,7 +1,12 @@
 import { playStyles } from "../styles/playScreen.js";
+import { backStyles } from '../styles/backButton.js';
+import { useMiddleware } from "../../utils/useMiddleware.js";
 
 export const playView = () => {
-    playStyles();
+
+    useMiddleware(playStyles);
+    useMiddleware(backStyles);
+
     return `
         <div class="game-screen">
             <back>⇦</back>
