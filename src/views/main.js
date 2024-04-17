@@ -1,9 +1,11 @@
 import { mainStyles } from "../styles/mainScreen.js";
 import { playButtonStyles } from "../styles/playButton.js";
 import { useMiddleware } from "../../utils/useMiddleware.js";
+import { defaultStyles } from '../../utils/defaultStyles.js';
 
 export const mainView = () => {
     
+    useMiddleware(defaultStyles);
     useMiddleware(mainStyles);
     useMiddleware(playButtonStyles);
 
