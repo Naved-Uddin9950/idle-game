@@ -1,4 +1,10 @@
+import { statusStyles } from '../styles/statusStyles.js';
+import { useMiddleware } from '../../utils/useMiddleware.js';
+
 export const statusView = () => {
+    
+    useMiddleware(statusStyles);
+    
     return `
         <div id="userModal" class="modal">
             <div class="modal-content">
