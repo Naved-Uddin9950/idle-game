@@ -2,15 +2,17 @@ import { mainStyles } from "../styles/mainScreen.js";
 import { playButtonStyles } from "../styles/playButton.js";
 import { useMiddleware } from "../../utils/useMiddleware.js";
 import { defaultStyles } from '../../utils/defaultStyles.js';
+import { statusStyles } from "../styles/statusStyles.js";
 
 export const mainView = () => {
     
     useMiddleware(defaultStyles);
     useMiddleware(mainStyles);
     useMiddleware(playButtonStyles);
+    useMiddleware(statusStyles);
 
     return `
-    <status style="margin: 10px; width:50px; height: 50px; display: block">📁</status>
+    <status></status>
         <div class="main-screen">
             <div class="title">MonsterTap</div>
             <img src="../public/images/player.gif" alt="Main Character" class="main-character">

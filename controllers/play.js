@@ -32,8 +32,7 @@ export const play = () => {
             back(backButton, main);
 
             setState('gold', goldCoins.toString());
-            // setState('player', JSON.stringify(playerData));
-            console.log(playerData);
+            setState('player', JSON.stringify(playerData));
         });
     } catch (error) {
         errorHandler('Play button', error);
