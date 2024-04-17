@@ -48,6 +48,3 @@ export const mainStyles = () => {
         document.head.appendChild(styleElement);
     }
 }
-
-
-// @import url('./playButton.css');
