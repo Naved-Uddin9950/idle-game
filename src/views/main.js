@@ -1,4 +1,10 @@
+import { mainStyles } from "../styles/mainScreen.js";
+import { useMiddleware } from "../../utils/useMiddleware.js";
+
 export const mainView = () => {
+    
+    useMiddleware(mainStyles);
+
     return `
         <div class="main-screen">
             <div class="title">Idle Tapper Game</div>
