@@ -5,6 +5,7 @@ import { play } from './play.js';
 import { useState } from '../utils/useState.js';
 import { useMiddleware } from '../utils/useMiddleware.js';
 import { user } from './user.js';
+import { openStatus } from './status.js';
 
 export const main = () => {
     try {
@@ -13,8 +14,17 @@ export const main = () => {
         gameWrapper.innerHTML = mainScreen;
         const goldCoins = Number(useState('gold')) || 0;
         useMiddleware(() => updateGold(goldCoins));
-        useMiddleware(user);
         useMiddleware(play);
+        useMiddleware(user);
+
+        const statusButton = document.querySelector('status');
+    
+        if (statusButton) {
+            statusButton.addEventListener('click', openStatus);
+        } else {
+            console.log("Status button not found.");
+        }
+        
     } catch (error) {
         errorHandler('Main screen', error);
     }

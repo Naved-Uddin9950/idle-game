@@ -10,6 +10,7 @@ export const mainView = () => {
     useMiddleware(playButtonStyles);
 
     return `
+    <status style="margin: 10px; width:50px; height: 50px; display: block">📁</status>
         <div class="main-screen">
             <div class="title">MonsterTap</div>
             <img src="../public/images/player.gif" alt="Main Character" class="main-character">

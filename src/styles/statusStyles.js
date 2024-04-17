@@ -43,6 +43,6 @@ export const statusStyles = () => {
         styleElement.innerText = cssStyles;
         styleElement.id = 'statusStyles';
 
-        document.head.appendChild('statusStyles');
+        document.head.appendChild(styleElement);
     }
 }
