@@ -11,7 +11,7 @@ export const mainView = () => {
 
     return `
         <div class="main-screen">
-            <div class="title">Idle Tapper Game</div>
+            <div class="title">MonsterTap</div>
             <img src="../public/images/player.gif" alt="Main Character" class="main-character">
             <play>Play</play>
             <div class="gold-display">Gold: <span id="gold-count">0</span></div>
