@@ -4,7 +4,7 @@ export const userStyles = () => {
     if(!temp) {
         const styleElement = document.createElement('style');
 
-        cssStyles = `
+        const cssStyles = `
             .modal {
                 display: none;
                 position: fixed;

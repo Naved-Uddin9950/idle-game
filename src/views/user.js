@@ -1,6 +1,10 @@
+import { userStyles } from '../styles/userStyles.js';
 import { useMiddleware } from "../../utils/useMiddleware.js";
 
-export const user = () => {
+export const userView = () => {
+
+    useMiddleware(userStyles);
+
     return `
         <div id="myModal" class="modal">
             <div class="modal-content">

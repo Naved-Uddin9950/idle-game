@@ -10,8 +10,8 @@ import { main } from './main.js';
 
 export const play = () => {
     try {
-        const player = new Player('Shinigami', 'Male', 100, 10, 1, 0);
-        const playerData = JSON.parse(useState('player')) || player;
+        // const player = new Player('Shinigami', 'Male', 100, 10, 1, 0);
+        const playerData = JSON.parse(useState('player'));
         const gameWrapper = document.getElementById('game-wrapper');
         const playBtn = document.querySelector('play');
         playBtn.addEventListener('click', () => {
@@ -32,7 +32,8 @@ export const play = () => {
             back(backButton, main);
 
             setState('gold', goldCoins.toString());
-            setState('player', JSON.stringify(playerData));
+            // setState('player', JSON.stringify(playerData));
+            console.log(playerData);
         });
     } catch (error) {
         errorHandler('Play button', error);
