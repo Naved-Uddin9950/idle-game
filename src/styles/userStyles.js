@@ -23,14 +23,17 @@ export const userStyles = () => {
                 padding: 20px;
                 border: 1px solid #888;
                 width: 80%;
+                text-align: center;
             }
             
             button {
                 background-color: #4CAF50;
                 color: white;
-                padding: 10px 20px;
+                padding: 5px 10px;
                 border: none;
                 cursor: pointer;
+                border: 1px solid #4CAF50;
+                border-radius: 5px;
             }
             
             button:hover {

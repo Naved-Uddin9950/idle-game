@@ -13,8 +13,7 @@ export const main = () => {
         gameWrapper.innerHTML = mainScreen;
         const goldCoins = Number(useState('gold')) || 0;
         useMiddleware(() => updateGold(goldCoins));
-        // useMiddleware(() => user);
-        user();
+        useMiddleware(user);
         useMiddleware(play);
     } catch (error) {
         errorHandler('Main screen', error);

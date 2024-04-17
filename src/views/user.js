@@ -10,12 +10,11 @@ export const userView = () => {
             <div class="modal-content">
                 <h2>Enter Your Information</h2>
                 <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="Enter your name">
+                <input type="text" id="name" placeholder="Enter your name"><br><br>
                 <label for="gender">Gender:</label>
                 <select id="gender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
-                <option value="other">Other</option>
                 </select>
                 <button id="submitBtn">Submit</button>
             </div>
