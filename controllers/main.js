@@ -6,15 +6,24 @@ import { useState } from '../utils/useState.js';
 import { useMiddleware } from '../utils/useMiddleware.js';
 import { user } from './user.js';
 import { openStatus } from './status.js';
+import { setState } from '../utils/setState.js';
 
 export const main = () => {
     try {
         const mainScreen = mainView();
         const gameWrapper = document.getElementById('game-wrapper');
         gameWrapper.innerHTML = mainScreen;
+        
+        setState('isPlaying', false);
         const goldCoins = Number(useState('gold')) || 0;
+
         useMiddleware(() => updateGold(goldCoins));
-        useMiddleware(play);
+
+        const playBtn = document.querySelector('play');
+        playBtn.addEventListener('click', () => {
+            useMiddleware(play);
+        });
+
         useMiddleware(user);
 
         const statusButton = document.querySelector('status');
