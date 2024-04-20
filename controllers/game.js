@@ -5,7 +5,7 @@ import { useState } from '../utils/useState.js';
 import { errorHandler } from '../utils/errorHandler.js';
 
 try {
-    const isPlaying = JSON.parse(useState('isPlaying'));
+    const isPlaying = JSON.parse(useState('isPlaying')) || false;
     
     if(isPlaying == false) {
         useMiddleware(main);
