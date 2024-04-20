@@ -11,6 +11,13 @@ export const buildingsStyle = () => {
                 top: 50%;
                 transform: translateY(-50%);
             }
+
+            .right-container {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
             
             .building {
                 background-color: #ccc;
