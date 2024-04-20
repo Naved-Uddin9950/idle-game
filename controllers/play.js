@@ -6,6 +6,7 @@ import { back } from '../utils/backButton.js';
 import { getGold, updateGold } from './gold.js';
 import { errorHandler } from '../utils/errorHandler.js';
 import { main } from './main.js';
+import { buildingsView } from '../src/views/buildings.js';
 
 export const play = () => {
     try {
@@ -14,7 +15,10 @@ export const play = () => {
         const gameWrapper = document.getElementById('game-wrapper');
 
         let playScreen = playView();
+        let buildings = buildingsView();
+
         gameWrapper.innerHTML = playScreen;
+        gameWrapper.innerHTML += buildings;
 
         setState('isPlaying', true);
         const goldCoins = Number(useState('gold')) || 0;

@@ -10,6 +10,10 @@ export const playStyles = () => {
                 width: 100%;
                 height: 100vh;
                 background-color: #f0f0f0;
+                background-image: url('https://img.freepik.com/free-vector/detailed-jungle-background_23-2148944013.jpg?w=740&t=st=1713614135~exp=1713614735~hmac=1104f8b36b19b3a3344128fd5da28a858fcb87ddeea03f3b576c97ea82fe4ef1');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
