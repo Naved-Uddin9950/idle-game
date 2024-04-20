@@ -28,6 +28,9 @@ export const buildingsStyle = () => {
                 background-size: cover;
                 width: 100px;
                 height: 100px;
+                text-align: center;
+                font-weight: bold;
+                color: #ffff;
 
                 border: 1px solid #999;
                 border-radius: 50%;
